@@ -11,16 +11,35 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Portafolio JPWO</title>
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="module" src="assets/js/main.js"></script>
+  <!-- EMAILS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "AQUI VA TU PUBLIC KEY",
+      });
+    })();
+  </script>
 </head>
 
 <body>
+  <div class="loader flex--container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237 268" class="loader_logo">
+      <path fill="currentColor"
+        d="M108.473 2.81055C114.675 -0.783262 122.325 -0.783265 128.527 2.81055L226.74 59.7212C232.912 63.298 236.712 69.8919 236.712 77.0259V190.974C236.712 198.108 232.912 204.702 226.74 208.279L128.527 265.189C122.325 268.783 114.675 268.783 108.473 265.189L10.2601 208.279C4.08755 204.702 0.287529 198.108 0.287529 190.974V77.0259C0.287529 69.8919 4.08754 63.298 10.2601 59.7212L108.473 2.81055Z">
+      </path>
+    </svg>
+  </div>
   <header class="header">
     <nav class="navbar grid--container flex--container">
       <a href="#" class="navbar_logo flex--container">
         <i class='bx bxs-coffee-bean'>JPWO</i>
       </a>
       <div id="nav" class="navbar_menu">
-        <a href="#close"><i class='bx bxs-message-square-x navbar_icon flex--container'></i></a>
+        <a href="#close"><i class='bx bxs-message-square-x navbar_icon btn_close flex--container'></i></a>
         <ul class="navbar_list flex--container">
           <li class="navbar_item"><a href="#home" class="navbar_link active">Inicio</a></li>
           <li class="navbar_item"><a href="#about" class="navbar_link">Acerca de mi</a></li>
@@ -60,7 +79,8 @@
       <i class='bx bx-math home_layer home_layer--9' data-speed="6"></i>
       <div class="home_container grid--container">
         <div class="home_image">
-          <img src="assets/img/photo_2024-10-11_19-28-42.jpg" alt="profile photo" title="Juan Pablo Wilches Orjuela">
+          <img src="assets/img/photo_2024-10-11_19-28-42.jpg" alt="profile photo" title="Juan Pablo Wilches Orjuela"
+            class="home_image-photo">
         </div>
         <ul class="home_social flex--container">
           <li class="home_social-item"><a href="" target="_blank" class="home_social-link"><i
@@ -88,13 +108,317 @@
         <p class="about_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illum quia alias
           minima. Cupiditate, assumenda! Totam sint ea vero quae obcaecati nostrum veritatis quia autem atque error
           impedit, amet nobis!</p>
-        <div class="about_cards">
+        <div class="about_cards flex--container">
+          <!-- card1 -->
+          <div class="about_card">
+            <img class="about_card--img" src="assets/img/codigo.webp" alt="Muestra de código" title="Muestra de codigo">
+          </div>
+          <!-- card2 -->
+          <div class="about_card">
+            <img class="about_card--img" src="assets/img/libro.jpg" alt="Saberes" alt="Conocimientos"
+              title="Conocimientos">
+          </div>
+          <!-- card3 -->
+          <div class="about_card">
+            <img class="about_card--img" src="assets/img/set.webp" alt="Set de trabajo" title="Set de trabajo">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class=" skills section">
+      <h2 class="section_title">Habilidades</h2>
+      <div class="skills_container grid--container">
+        <p class="skills_description flex--container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+          ipsa temporibus nihil, dicta vero aliquam id rem doloremque, ipsam placeat doloribus corrupti provident
+          consequuntur quidem voluptatem itaque adipisci? Quaerat, perferendis.</p>
+        <div class="skills_wrapper flex--container">
+          <div class="skills_cards flex--container">
+            <!-- card1 -->
+            <details class="skills_cards-container" name="moreInfo" open>
+              <summary class="skills_cards-title flex--container"><i class='bx bxl-html5'></i>
+              </summary>
+              <div class="skills_card-container">
+                <h3 class="skills_card-title">HTML</h3>
+                <p class="skills_card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  quibusdam reprehenderit neque rem
+                  ratione reiciendis alias. Quasi illo est eos natus? Deleniti rerum ratione laborum excepturi, repellat
+                  impedit vel fugiat?</p>
+              </div>
+            </details>
+            <!-- card2 -->
+            <details class="skills_cards-container" name="moreInfo" open>
+              <summary class="skills_cards-title flex--container"><i class='bx bxl-css3'></i>
+              </summary>
+              <div class="skills_card-container">
+                <h3 class="skills_card-title">CSS</h3>
+                <p class="skills_card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  quibusdam reprehenderit neque rem
+                  ratione reiciendis alias. Quasi illo est eos natus? Deleniti rerum ratione laborum excepturi, repellat
+                  impedit vel fugiat?</p>
+              </div>
+            </details>
+            <!-- card3 -->
+            <details class="skills_cards-container" name="moreInfo" open>
+              <summary class="skills_cards-title flex--container"><i class='bx bxl-javascript'></i>
+              </summary>
+              <div class="skills_card-container">
+                <h3 class="skills_card-title">JavaScript</h3>
+                <p class="skills_card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  quibusdam reprehenderit neque rem
+                  ratione reiciendis alias. Quasi illo est eos natus? Deleniti rerum ratione laborum excepturi, repellat
+                  impedit vel fugiat?</p>
+              </div>
+            </details>
+            <!-- card4 -->
+            <details class="skills_cards-container" name="moreInfo" open>
+              <summary class="skills_cards-title flex--container"><i class='bx bxl-c-plus-plus'></i>
+              </summary>
+              <div class="skills_card-container">
+                <h3 class="skills_card-title">C++</h3>
+                <p class="skills_card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  quibusdam reprehenderit neque rem
+                  ratione reiciendis alias. Quasi illo est eos natus? Deleniti rerum ratione laborum excepturi, repellat
+                  impedit vel fugiat?</p>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="skills_tags grid--container">
+          <h3 class="skills_tags-title">Habilidades blandas</h3>
+          <div class="skills_tags-container flex--container">
+            <span class="skills_tag">Responsabilidad</span>
+            <span class="skills_tag">Trabajo en equipo</span>
+            <span class="skills_tag">Puntualidad</span>
+            <span class="skills_tag">Organizacion</span>
+            <span class="skills_tag">Autodidacta</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects section">
+      <h2 class="section_title">Proyectos</h2>
 
+      <div class="projects_container grid--container">
+        <div class="projects_project">
+          <div class="projects_inner grid--container">
+            <div class="projects_image">
+              <img src="assets/img/project1.jpg" alt="project 1" title="Ecommerce Vanilla" />
+            </div>
+
+            <div class="projects_info">
+              <h3 class="projects_name">Proyecto 1</h3>
+              <p class="projects_description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="projects_buttons">
+                <button class="btn projects_button" type="button">
+                  VER DEMO
+                </button>
+                <button class="btn projects_button" type="button">
+                  VER CÓDIGO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects_project">
+          <div class="projects_inner grid--container">
+            <div class="projects_image">
+              <img src="assets/img/project2.png" alt="proyecto 1" title="Consumiendo API Pokemon con React" />
+            </div>
+
+            <div class="projects_info">
+              <h3 class="projects_name">Proyecto 2</h3>
+              <p class="projects_description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="projects_buttons">
+                <button class="btn projects_button" type="button">
+                  VER DEMO
+                </button>
+                <button class="btn projects_button" type="button">
+                  VER CÓDIGO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects_project">
+          <div class="projects_inner grid--container">
+            <div class="projects_image">
+              <img src="assets/img/project3.jpg" alt="project 1" title="CRUD con React" />
+            </div>
+
+            <div class="projects_info">
+              <h3 class="projects_name">Proyecto 3</h3>
+              <p class="projects_description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="projects_buttons">
+                <button class="btn projects_button" type="button">
+                  VER DEMO
+                </button>
+                <button class="btn projects_button" type="button">
+                  VER CÓDIGO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects_project">
+          <div class="projects_inner grid--container">
+            <div class="projects_image">
+              <img src="assets/img/project4.png" alt="project 1" title="Aplicación del tiempo con React" />
+            </div>
+
+            <div class="projects_info">
+              <h3 class="projects_name">Proyecto 4</h3>
+              <p class="projects_description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="projects_buttons">
+                <button class="btn projects_button" type="button">
+                  VER DEMO
+                </button>
+                <button class="btn projects_button" type="button">
+                  VER CÓDIGO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact section">
+      <h2 class="section_title">Contacto</h2>
+
+      <div class="contact_container grid--container">
+        <div class="contact_info">
+          <h3 class="contact_info-title">Información de contacto</h3>
+          <p class="contact_info-description">
+            Utiliza los siguientes canales para comunicarte conmigo:
+          </p>
+
+          <address class="contact_info-data">
+            <div class="contact_info-item">
+              <i class="bx bxl-whatsapp"></i>
+
+              <span class="contact_info-number">
+                <a href="https://wa.me/573143754857?text=Tu%20Mensaje%20De%20Texto" target="_blank"
+                  rel="noreferrer nofollow">Enviar mensaje a WhatsApp</a>
+              </span>
+            </div>
+
+            <div class="contact_info-item">
+              <i class="bx bx-phone"></i>
+
+              <span class="contact_info-number">
+                <a href="tel:57-314-375-4857" target="_blank" rel="noreferrer nofollow">
+                  +57 314 375 4857
+                </a>
+              </span>
+            </div>
+
+            <div class="contact_info-item">
+              <i class="bx bxs-envelope"></i>
+
+              <span class="contact_info-mail">
+                <a id="mail" href="mailto:juanpablowo@gmail.com" target="_blank" rel="noreferrer nofollow">
+                  juanpablowo@gmail.com
+                </a>
+              </span>
+            </div>
+
+            <div class="contact_info-item">
+              <i class="bx bx-map"></i>
+
+              <span class="contact_info-map"> Bogotá, Colombia. </span>
+            </div>
+          </address>
+        </div>
+
+        <div class="contact_form">
+          <h3 class="contact_form-title">Enviar mensaje</h3>
+
+
+          <form id="form" class="contact_form-container">
+            <div class="contact_form-group">
+              <label for="name" class="contact_form-label">Nombre</label>
+              <input type="text" id="name" name="name" class="contact_form-input" />
+            </div>
+
+            <div class="contact_form-group">
+              <label for="email" class="contact_form-label">Correo</label>
+              <input type="email" id="email" name="email" class="contact_form-input" />
+            </div>
+
+            <div class="contact_form-group">
+              <label for="subject" class="contact_form-label">Asunto</label>
+              <input type="text" id="subject" name="subject" class="contact_form-input" />
+            </div>
+
+            <div class="contact_form-group">
+              <label for="message" class="contact_form-label">Mensaje</label>
+              <textarea id="message" name="message" cols="30" rows="10" class="contact_form-input"></textarea>
+            </div>
+            <dialog id="modal">
+              Formulario enviado con éxito!
+              <button type="reset" id="btn_close-modal">Cerrar</button>
+            </dialog>
+
+            <button type="submit" class="btn contact_form-button">
+              Enviar
+            </button>
+          </form>
         </div>
       </div>
     </section>
   </main>
-  <footer></footer>
+  <footer class="footer section">
+    <div class="footer_container grid--container">
+      <div class="footer_info">
+        <h3 class="footer_title">Juan Pablo Wilches Orjuela</h3>
+        <p class="footer_description">
+          Desarrollador web, linuxero, activista y fanático de la tecnología.
+        </p>
+      </div>
+
+      <div class="footer_social">
+        <h3 class="footer_title">Redes Sociales</h3>
+
+        <ul class="footer_social-list">
+          <li class="footer_social-item">
+            <a class="footer_social-link" href="#" target="_blank" rel="noreferrer nofollow"><i
+                class="bx bxl-facebook"></i></a>
+          </li>
+
+          <li class="footer_social-item">
+            <a class="footer_social-link" href="#" target="_blank" rel="noreferrer nofollow"><i
+                class="bx bxl-instagram"></i></a>
+          </li>
+
+          <li class="footer_social-item">
+            <a class="footer_social-link" href="#" target="_blank" rel="noreferrer nofollow"><i
+                class="bx bxl-twitter"></i></a>
+          </li>
+
+          <li class="footer_social-item">
+            <a class="footer_social-link" href="#" target="_blank" rel="noreferrer nofollow"><i
+                class="bx bxl-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer_copy"></p>
+  </footer>
 </body>
 
 </html>
